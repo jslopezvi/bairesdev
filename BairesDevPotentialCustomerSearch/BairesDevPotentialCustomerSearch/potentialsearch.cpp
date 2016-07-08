@@ -137,36 +137,7 @@ BairesWindow::BairesWindow()
                         sequence.at(8),
                         sequence.at(9));
         }        
-    }
-
-    // Create the data model
-    model = new QSqlRelationalTableModel(ui.customersTable);
-    model->setTable("profiles");
-
-    // Set the header captions
-    model->setHeaderData(model->fieldIndex("linkedin_profile"), Qt::Horizontal, tr("PublicProfileURL"));
-    model->setHeaderData(model->fieldIndex("name"), Qt::Horizontal, tr("Name"));
-    model->setHeaderData(model->fieldIndex("last_name"), Qt::Horizontal, tr("LastName"));
-    model->setHeaderData(model->fieldIndex("title"), Qt::Horizontal, tr("Title"));
-    model->setHeaderData(model->fieldIndex("geographic_area"), Qt::Horizontal, tr("GeographicArea"));
-    model->setHeaderData(model->fieldIndex("recommendations_count"), Qt::Horizontal, tr("Recommendations"));
-    model->setHeaderData(model->fieldIndex("connections_count"), Qt::Horizontal, tr("Connections"));
-    model->setHeaderData(model->fieldIndex("current_role"), Qt::Horizontal, tr("Current Role"));
-    model->setHeaderData(model->fieldIndex("industry"), Qt::Horizontal, tr("Industry"));
-    model->setHeaderData(model->fieldIndex("country"), Qt::Horizontal, tr("Country"));
-
-    // Populate the model
-    if (!model->select()) {
-        qDebug() << "Error:" << model->lastError();
-        return;
-    }
-
-    // Set the model and hide the ID column
-    ui.customersTable->setModel(model);    
-    ui.customersTable->setColumnHidden(model->fieldIndex("id"), true);  
-    ui.customersTable->setCurrentIndex(model->index(0, 0));   
-    ui.customersTable->horizontalHeader()->setStretchLastSection(true);
-    ui.customersTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    }    
 
 	// Query main industries
     QSqlQuery query(db);	
