@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>BairesDevPotentialCustomerSearch.ico</file>
+        <file>PeopleToRate.txt</file>
+    </qresource>
+</RCC>
