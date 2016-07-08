@@ -2,7 +2,7 @@
 Source code for exercises of BairesDev recruitment process.
 
 Developed using C++ and Qt 5.6 msvc2013 x86. 
-IDE used: Visual Studio 2013
+IDE used: Visual Studio 2013.
 Operating Systems tested: Windows 10 x64, Windows 7 x64, with 32 bit binaries.
 
 Solution description:
@@ -18,7 +18,7 @@ Later, I build the database and just start doing queries.
 
 The gui code is just boilerplate.
 
-For the main logic, look at potentialsearch.cpp.
+For the main logic, look at https://github.com/jslopezvi/bairesdev/blob/master/BairesDevPotentialCustomerSearch/BairesDevPotentialCustomerSearch/potentialsearch.cpp
 
 
 
